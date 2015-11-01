@@ -1,10 +1,10 @@
-classify <- function(X, pars) {
+ds.classify <- function(X, pars) {
   y_class <- (2*(X[, pars$j] > pars$t) - 1) * pars$m
   # return class label vector for input pars
   return(y_class)
 }
 
-train <- function(X, w, y) {
+ds.train <- function(X, w, y) {
   sum_w <- sum(w)
   n_i <- dim(X)[1]
   n_j <- dim(X)[2]
